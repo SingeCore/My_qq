@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#d8e0e8">        <!--android:layout_height="match_parent" 必须设置为 match_parent -->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">        <!--android:layout_weight="1" 关键比例设置为1
+                                             android:layout_height="wrap_content" 必须设置为wrap_content   -->
+
+    </android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom|center">    <!--android:layout_height="match_parent" 必须设置为 match_parent 留出编辑和按键的空间
+                                                android:gravity="bottom|center">  关键：使整个layout局下布局-->
+        <EditText
+            android:id="@+id/input_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Type shomething here"
+            android:maxLines="2"/>
+        <Button
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送"/>
+    </LinearLayout>
+
+
+</LinearLayout>
